@@ -1,0 +1,10 @@
+{
+	"header": {
+		"navLinks": [
+			{"url": "#contact", "name": "О проекте"},
+			{"url": "#about", "name": "Процесс"},
+			{"url": "#services", "name": "Услуги"},
+			{"url": "#footer-info", "name": "Контакты"}
+		]
+	}
+}

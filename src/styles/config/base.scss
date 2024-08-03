@@ -1,0 +1,41 @@
+@import "functions";
+@import "mixins";
+@import "keyframes";
+
+[class*="__container"] {
+	margin-inline: auto;
+	max-inline-size: rem($max-width-container);
+	padding-inline: rem($main-offset);
+}
+
+.ibg {
+	position: relative;
+
+	img {
+		position: absolute;
+		inset-block-start: 0;
+		inset-inline-start: 0;
+		object-fit: cover;
+		block-size: 100%;
+		inline-size: 100%;
+	}
+
+	&_contain {
+		img {
+			object-fit: contain;
+		}
+	}
+}
+
+.wrapper {
+	display: flex;
+	min-block-size: 100%;
+	position: relative;
+	overflow: hidden;
+	flex-direction: column;
+}
+
+.page {
+	position: relative;
+	flex: 1 1 auto;
+}

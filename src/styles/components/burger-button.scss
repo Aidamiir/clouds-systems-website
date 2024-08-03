@@ -1,0 +1,45 @@
+.burger-button {
+	display: block;
+	overflow: hidden;
+
+	&__ham {
+		transition: transform var(--cs-default-transition);
+		user-select: none;
+	}
+
+	&__line {
+		fill: none;
+		transition:
+			stroke-dasharray 400ms,
+			stroke-dashoffset 400ms;
+		stroke: #fff;
+		stroke-width: 5;
+		stroke-linecap: round;
+
+		&_top {
+			stroke-dasharray: 40 139;
+		}
+
+		&_bottom {
+			stroke-dasharray: 40 180;
+		}
+	}
+
+	&.active {
+		&__ham {
+			transform: rotate(45deg);
+		}
+
+		&__line {
+			stroke: var(--cs-white-color);
+
+			&_top {
+				stroke-dashoffset: rem(-98);
+			}
+
+			&_bottom {
+				stroke-dashoffset: rem(-138);
+			}
+		}
+	}
+}

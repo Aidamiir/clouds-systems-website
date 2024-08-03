@@ -1,0 +1,19 @@
+@use "sass:math" as *;
+@import './mixins';
+
+.title {
+	font-weight: 700;
+	@include adaptive-clamp('font-size', 35, 20);
+
+	&_mb-25 {
+		margin-bottom: rem(25);
+	}
+}
+
+.description {
+	font-size: rem(16);
+}
+
+.text-center {
+	text-align: center;
+}

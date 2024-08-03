@@ -1,0 +1,44 @@
+@import "../config/functions";
+@import "../config/mixins";
+
+.header {
+	padding-block: rem(25);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 50;
+	backdrop-filter: blur(#{rem(3)});
+	transition: padding-block 0.3s ease-in-out;
+
+	&__container {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.nav {
+	&__list {
+		gap: rem(15);
+		display: flex;
+		align-items: flex-end;
+	}
+
+	&__item {
+		min-width: rem(60);
+	}
+
+	&__link {
+        font-size: rem(18);
+		transition: color var(--cs-default-transition);
+
+		@include any-hover {
+			color: var(--cs-link-hover-color);
+		}
+
+        &_logo {
+            font-size: rem(24);
+            line-height: 90%;
+        }
+	}
+}
