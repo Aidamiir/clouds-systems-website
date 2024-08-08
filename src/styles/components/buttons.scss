@@ -1,0 +1,19 @@
+@import "../config/mixins";
+
+.button {
+	padding: rem(12) rem(15);
+	font-size: rem(16);
+	border-style: solid;
+	border-width: rem(1);
+	border-color: rgba(#fff, 40%);
+	border-radius: var(--cs-default-radius);
+	transition: border-color var(--cs-default-transition),
+	background-color var(--cs-default-transition),
+	color var(--cs-default-transition);
+
+	&:hover {
+		background-color: rgba(#fff, 90%);
+		border-color: var(--cs-black-color);
+		color: var(--cs-black-color);
+	}
+}

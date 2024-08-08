@@ -1,0 +1,30 @@
+@import "../config/mixins";
+
+.key-skills {
+	padding-block: rem(120);
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__button {
+		margin: rem(40) auto 0 auto ;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-column-gap: rem(20);
+		grid-row-gap: rem(20);
+		justify-content: center;
+
+		@include media-mx(1000) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include media-mx(620) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+}

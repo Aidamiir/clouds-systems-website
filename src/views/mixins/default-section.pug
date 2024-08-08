@@ -1,0 +1,9 @@
+mixin default-section(title, firstText, secondText, modifier)
+	section.default-section.text-center(class=`${modifier}`)
+		.default-section__container
+			h2.title.title__md.title_mb-25=title
+
+			.default-section__content
+				p.text=firstText
+				if secondText
+					p.text=secondText

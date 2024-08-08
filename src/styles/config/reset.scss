@@ -39,7 +39,7 @@ html {
 		touch-action: none;
 		overflow: hidden;
 
-		.wrapper {
+		.wrapper, .header__container {
 			margin-inline-end: var(--cs-scrollbar-width, #{rem(16)});
 		}
 	}

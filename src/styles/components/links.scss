@@ -1,0 +1,14 @@
+@import "../config/mixins";
+
+.link {
+	font-size: rem(18);
+	transition: color var(--cs-default-transition);
+
+	@include any-hover {
+		color: var(--cs-orange-hover-color);
+	}
+
+	&_lg {
+		font-size: rem(24);
+	}
+}

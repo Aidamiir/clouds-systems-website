@@ -1,6 +1,14 @@
+@import "../config/mixins";
+
 .burger-button {
-	display: block;
+	position: relative;
+	z-index: 10;
+	display: none;
 	overflow: hidden;
+
+	@include media-mx(845) {
+		display: block;
+	}
 
 	&__ham {
 		transition: transform var(--cs-default-transition);
@@ -9,10 +17,9 @@
 
 	&__line {
 		fill: none;
-		transition:
-			stroke-dasharray 400ms,
-			stroke-dashoffset 400ms;
-		stroke: #fff;
+		transition: stroke-dasharray 400ms,
+		stroke-dashoffset 400ms;
+		stroke: var(--cs-white-color);
 		stroke-width: 5;
 		stroke-linecap: round;
 
@@ -25,7 +32,7 @@
 		}
 	}
 
-	&.active {
+	.burger-menu-open & {
 		&__ham {
 			transform: rotate(45deg);
 		}

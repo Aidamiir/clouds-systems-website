@@ -1,16 +1,22 @@
 header.header
 	.header__container
-		nav.nav
+		a.link.link_lg(href="#") CloudsSystems
+
+		nav.nav(data-da='burger-menu-body, 845')
 			ul.nav__list
 				li.nav__item.text-center
-					a.nav__link(href="#contact") Контакты
+					a.nav__link.link(href="#") О нас
 				li.nav__item.text-center
-					a.nav__link(href="#about") О нас
+					a.nav__link.link(href="#") Проекты
 				li.nav__item.text-center
-					a.nav__link.nav__link_logo(href="#!") CloudsSystems
+					a.nav__link.link(href="#") Решения
 				li.nav__item.text-center
-					a.nav__link(href="#projects") Проекты
-				li.nav__item.text-center
-					a.nav__link(href="#skills") Решения
-					
+					a.nav__link.link(href="#") Контакты
+
+		button.button(type="button", data-da='burger-menu-body, 845') Связаться с нами
+
+		.header__burger-menu#burger-menu
+			.header__burger-menu-inner
+				.header__burger-menu-body#burger-menu-body
+
 		include burger-button

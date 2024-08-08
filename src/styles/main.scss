@@ -40,23 +40,25 @@
 * БЕМ блоки используемые во всё проекте
 */
 @import "config/common";
-@import "config/btn";
 
 /**
 * Подключение стилей отдельных блоков и секций
 */
 @import "components/header";
-@import "components/burger-button";
-@import "components/popup";
-// @import "components/checkbox";
-// @import "components/tabs";
-// @import "components/accordion";
 @import "components/footer";
+@import "components/popup";
 
-@import "sections/about";
+@import "components/burger-button";
+@import "components/buttons";
+@import "components/links";
+
+@import "components/default-section";
+@import "components/key-skill-item";
+@import "components/completed-project-item";
+
+@import "sections/promo-landing";
 @import "sections/solutions";
 @import "sections/card";
-@import "sections/experience";
-@import "sections/skills";
-@import "sections/projects";
+@import "sections/key-skills";
+@import "sections/completed-project";
 @import "sections/contact";

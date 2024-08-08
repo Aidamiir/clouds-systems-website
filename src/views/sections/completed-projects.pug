@@ -1,0 +1,26 @@
+include ../mixins/completed-project-item
+
+section.completed-projects
+	.completed-projects__container
+		h2.title__md.title.title_mb-25.text-center Выполненные проекты
+
+		ul.completed-projects__list
+			+completed-project-item('Разработка и внедрение СКУД систем', 'Строительный сектор', 'MicroPython, PHP, Zabbix, MySQL', false)
+			+completed-project-item('Разработка DWH и ETL процессов для построения PowerBI дашбордов', 'IT Сектор', 'Greenplum, PostgreSQL, K8s, Airflow, Python', false)
+			+completed-project-item('Разработка DWH и ETL процессов для построения PowerBI дашбордов', 'Косметология', 'Greenplum, PostgreSQL, K8s, Airflow, Python, 1C', false)
+			+completed-project-item('Разработка DWH и ETL процессов для построения PowerBI дашбордов', 'Строительный сектор', 'Greenplum, PostgreSQL, K8s, Airflow, Python, 1C, MSSQL', false)
+			+completed-project-item('Перенос CRM системы на микросервисы', 'Строительный сектор', 'MSSQL, K8s, Python, Docker, ArgoCD, Kafka, Minio', false)
+			+completed-project-item('Внедрение DataLake', 'Строительный сектор', 'MSSQL, K8s, Python, Docker, ArgoCD, Kafka, Minio, Airflow, Spark', false)
+			+completed-project-item('Внедрение системы VDI для работы удаленных пользователей', 'Строительный сектор', 'Vmware Horizon, ESXI', true)
+			+completed-project-item('Внедрение мониторинга инфраструктуры и приложений', 'Строительный сектор', 'Zabbix, Grafana, ELK, Observium, Jaeger', true)
+			+completed-project-item('Реализация интеграций с внешними системами', 'Строительный сектор', 'Python, Airflow, K8s, ArgoCD', true)
+			+completed-project-item('Реализация речевой аналитики и классификация звонков', 'Строительный сектор', 'Python, Whisper, ChatGPT, NVIDIA Chat With RTX, Weaviate, K8s, Kafka', true)
+			+completed-project-item('Реализация интеграций с WhatsApp и разработка официального API', 'Строительный сектор', 'GoLang, K8s, Kafka, Minio', true)
+			+completed-project-item('Реализация предиктивной модели для оптимизации складских остатков', 'Строительный сектор', 'Python, K8s, Kafka, Minio, Spark, TensorFlow, Pandas', true)
+			+completed-project-item('Реализации классификации картинок из ТГ бота', 'Строительный сектор', 'Python, Minio, TensorFlow, MLOps, Kafka', true)
+			+completed-project-item('Реализация аналитики по ценным бумагам на фондовом рынке', 'Банковский Сектор', 'Python, Minio, TensorFlow, MLOps, FastAPI, Redis', true)
+			+completed-project-item('Реализация системы для AB - тестирования и проведение AB - тестирования', 'Банковский Сектор', 'Python, Minio, TensorFlow, MLOps, FastAPI, Redis', true)
+			+completed-project-item('Внедрение и поддержка инфраструктуры проекта', 'Государственный сектор, ВАТС, Интернет-Магазины', 'GitlabCI, ArgoCD, WatchTower, Docker, Docker-Compose, K8s, Ansible, Terraform', true)
+
+
+		button.completed-projects__button.button#completed-projects-show-more(type="button") Показать ещё
