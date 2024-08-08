@@ -1,18 +1,56 @@
-@import "../config/functions";
-@import "../config/mixins";
-
 .footer {
-	padding-block: rem(20);
-	background: var(--black-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: rem(60) 0;
 
-	// .footer__container
-	&__container {
+	background-color: var(--cs-dark-bg-color);
+	color: var(--cs-white-color);
+
+	&__logo {
+		@include adaptive-clamp('font-size', 30, 20);
+		margin-bottom: rem(30);
+	}
+
+	&__contact {
 		display: flex;
-		align-items: center;
-
-		@include media-mx(510) {
-			flex-direction: column;
-			align-items: flex-start;
+		flex-direction: column;
+		gap: rem(15);
+		
+		p {
+			@include adaptive-clamp('font-size', 18, 14);
 		}
+	}
+
+	&__socials {
+		display: flex;
+		justify-content: center;
+		gap: rem(20);
+		margin-top: rem(20);
+	}
+
+	&__icon {
+		display: inline-block;
+		transition: var(--cs-default-transition);
+		filter: brightness(5);
+
+		&:hover {
+			transform: scale(1.1);
+			// filter: brightness(5);
+		}
+	}
+}
+
+@media (max-width: rem(480)) {
+	.footer {
+		padding: rem(40) 0;
+	}
+}
+
+@media (max-width: rem(320)) {
+	.footer {
+		padding: rem(25) 0;
 	}
 }

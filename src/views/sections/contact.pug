@@ -1,0 +1,16 @@
+section#contact.contact
+  .contact__container
+    h1.title.title_mb-25.contact__title Свяжитесь с&nbsp;нами
+    .description.contact__text
+      p
+        //| Чтобы узнать, как мы&nbsp;можем помочь вашему бизнесу развиваться быстрее и&nbsp;эффективнее.
+        | Мы&nbsp;готовы ответить на&nbsp;любые ваши вопросы. Пожалуйста, заполните форму ниже, и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время.
+    .contact__form
+      form
+        input.contact__input(type="text" placeholder="Ваше имя" required)
+        input.contact__input(type="tel" placeholder="Ваш телефон" required)
+        input.contact__input(type="email" placeholder="Ваш email" required)
+        button.btn.contact__button(type="submit") Отправить
+      p.contact__consent
+        | Нажимая на&nbsp;кнопку &laquo;Отправить&raquo;, Вы&nbsp;даете согласие на&nbsp;обработку персональных данных и&nbsp;соглашаетесь&nbsp;c 
+        a.contact__link(href="#") политикой конфиденциальности.

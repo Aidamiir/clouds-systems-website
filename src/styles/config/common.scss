@@ -11,7 +11,7 @@
 }
 
 .description {
-	font-size: rem(16);
+	@include adaptive-clamp('font-size', 20, 14);
 }
 
 .text-center {

@@ -1,0 +1,16 @@
+.btn {
+    padding: rem(15) rem(30);
+    margin: rem(20) 0;
+    
+    background-color: var(--cs-text-color-red);
+    color: var(--cs-white-color);
+    border-radius: rem(5);
+    @include adaptive-clamp('font-size', 18, 12);
+    cursor: pointer;
+    
+    transition: var(--cs-default-transition);
+
+    @include any-hover {
+        background-color: var(--cs-link-hover-color-red);
+    }
+}

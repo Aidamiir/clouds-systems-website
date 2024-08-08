@@ -1,0 +1,35 @@
+.card {
+  border: var(--cs-default-border);
+  background-color: var(--cs-white-bg-color);
+  border-radius: rem(20);
+
+  padding: rem(20);
+  flex: 1 1 calc(33.333% - rem(20));
+
+  transition: var(--cs-default-transition);
+  
+  @include any-hover {
+    transform: scale(1.03);
+    box-shadow: 0 rem(8) rem(16) rgba(0, 0, 0, 0.2);
+    background-color: var(--cs-dark-bg-color);
+    color: var(--cs-white-color);
+  }
+
+  &-title {
+    @include adaptive-clamp('font-size', 22, 16);
+    margin: 0 0 rem(15) 0;
+    font-weight: 600;
+  }
+
+  &-image {
+    width: 100%;
+    height: auto;
+    border-radius: rem(4);
+  }
+
+  &-text {
+    line-height: 1.5;
+    margin-top: rem(16);
+    @include adaptive-clamp('font-size', 16, 14);
+  }
+}
