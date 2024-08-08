@@ -5,7 +5,7 @@
 	--cs-font-family: "Open Sans", sans-serif;
 
 	// Размер шрифта по умолчанию
-	--cs-font-size: #{rem(16)};
+	--cs-font-size: #{rem(18)};
 
 	// Жирность шрифта по умолчанию
 	--cs-font-weight: 400;
@@ -19,8 +19,11 @@
 	--cs-black-color: #000;
 	--cs-gray: #ccc;
 
-	--cs-link-hover-color: #ff4500;
+	--cs-orange-hover-color: #e84809;
 
+	// Radii
+	--cs-default-radius: #{rem(8)};
+
+	// Other
 	--cs-default-transition: .3s ease-in-out;
-	--cs-default-border: #{rem(1)} solid rgba(0, 0, 0, 0.2);
 }

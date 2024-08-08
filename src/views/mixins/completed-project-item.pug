@@ -1,0 +1,11 @@
+mixin completed-project-item(projectText, industryText, stackText, isHidden)
+	li.completed-project-item(class=isHidden ? 'hidden' : '')
+		div.text
+			span.bold Проект:
+			|  #{projectText}
+		div.text
+			span.bold Отрасль:
+			|  #{industryText}
+		div.text
+			span.bold Стек технологий:
+			|  #{stackText}

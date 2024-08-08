@@ -1,0 +1,17 @@
+@import "../config/mixins";
+
+.completed-project-item {
+	width: 100%;
+	cursor: default;
+	padding: rem(20);
+	border-style: solid;
+	border-width: rem(1);
+	border-color: rgba(#fff, 40%);
+	border-radius: var(--cs-default-radius);
+
+	line-height: 130%;
+
+	&.hidden {
+		display: none;
+	}
+}

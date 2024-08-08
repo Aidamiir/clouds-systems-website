@@ -1,0 +1,11 @@
+@import "../config/mixins";
+
+.solutions {
+	display: flex;
+	flex-direction: column;
+
+	&__text {
+		margin-inline: auto;
+		max-width: rem(580);
+	}
+}

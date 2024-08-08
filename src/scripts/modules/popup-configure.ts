@@ -1,7 +1,7 @@
 export class PopupConfigure {
 	private _html: HTMLElement;
 	private _body: HTMLElement;
-	openedPopup?: Element;
+	openedPopup?: HTMLElement;
 
 	constructor() {
 		this._html = document.documentElement;
@@ -14,6 +14,7 @@ export class PopupConfigure {
 		const onTransitionEndHandle = ({ target }: TransitionEvent) => {
 			if (target === this.openedPopup) {
 				this.toggleBodyLock(false);
+
 				this._body.removeEventListener('transitionend', onTransitionEndHandle);
 			}
 		};
@@ -27,7 +28,6 @@ export class PopupConfigure {
 				this.openPopup(button.dataset.popupId!);
 				this.toggleBodyLock(true);
 			}
-
 			else if (this.openedPopup && (target.hasAttribute('data-close-overlay') || target.closest('.btn-close'))) {
 				this.closePopup();
 				this._body.addEventListener('transitionend', onTransitionEndHandle);
@@ -36,17 +36,20 @@ export class PopupConfigure {
 	}
 
 	private openPopup(id: string) {
-		const popupElement = document.getElementById(id);
+		const popupElement = document.getElementById(id) as HTMLElement;
 
 		if (popupElement) {
 			popupElement.classList.add('open');
 			this.openedPopup = popupElement;
+			this._html.classList.add('burger-menu-open');
 		}
 	}
 
 	private closePopup() {
-		this.openedPopup?.classList.remove('open');
-		this._html.classList.remove('burger-menu-open');
+		if (this.openedPopup) {
+			this.openedPopup.classList.remove('open');
+			this._html.classList.remove('burger-menu-open');
+		}
 	}
 
 	public toggleBodyLock(isLock: boolean) {

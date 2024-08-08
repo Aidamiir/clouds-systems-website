@@ -1,4 +1,4 @@
-import { ToggleScrollLockType } from '@scripts/type/toggle-scroll-lock.type.ts';
+import type { ToggleScrollLockType } from '@scripts/type/toggle-scroll-lock.type.ts';
 
 export class BurgerMenuConfigure {
 	private readonly _toggleScrollLock: ToggleScrollLockType;

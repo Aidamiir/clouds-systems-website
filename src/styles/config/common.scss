@@ -3,17 +3,42 @@
 
 .title {
 	font-weight: 700;
-	@include adaptive-clamp('font-size', 35, 20);
+	line-height: 120%;
 
 	&_mb-25 {
 		margin-bottom: rem(25);
 	}
+
+	&__lg {
+		@include adaptive-clamp('font-size', 48, 26);
+	}
+
+	&__md {
+		@include adaptive-clamp('font-size', 38, 24);
+	}
+
+	&__sm {
+		@include adaptive-clamp('font-size', 22, 16);
+	}
 }
 
-.description {
-	font-size: rem(16);
+.text {
+	line-height: 140%;
+	@include adaptive-clamp('font-size', 20, 16);
+
+	&__md {
+		@include adaptive-clamp('font-size', 35, 16);
+	}
+
+	&__sm {
+		@include adaptive-clamp('font-size', 16, 12);
+	}
 }
 
 .text-center {
 	text-align: center;
+}
+
+.bold {
+	font-weight: 700;
 }
