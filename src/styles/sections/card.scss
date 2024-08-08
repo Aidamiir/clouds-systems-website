@@ -1,3 +1,5 @@
+@import "../config/mixins";
+
 .card {
   border: var(--cs-default-border);
   background-color: var(--cs-white-bg-color);
@@ -7,7 +9,7 @@
   flex: 1 1 calc(33.333% - rem(20));
 
   transition: var(--cs-default-transition);
-  
+
   @include any-hover {
     transform: scale(1.03);
     box-shadow: 0 rem(8) rem(16) rgba(0, 0, 0, 0.2);
@@ -15,7 +17,7 @@
     color: var(--cs-white-color);
   }
 
-  &-title {
+  &__title {
     @include adaptive-clamp('font-size', 22, 16);
     margin: 0 0 rem(15) 0;
     font-weight: 600;
